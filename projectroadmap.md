@@ -18,18 +18,18 @@
 
 Start coding and use git to manage the code. 
 
-- Update and add commit messages in the repository in ksu Github organization. Use Github desktop. 
-- Commit at least 6 code changes of significant size (not just a spelling error fix for example). 
-- Each commit should include a comment that explains what was done. The comment must be specific (ie. not just Updated README.md but rather explain what your update was and why you did it briefly).
+- [ ] Update and add commit messages in the repository in ksu Github organization. Use Github desktop. 
+- [ ] Commit at least 6 code changes of significant size (not just a spelling error fix for example). 
+- [ ] Each commit should include a comment that explains what was done. The comment must be specific (ie. not just Updated README.md but rather explain what your update was and why you did it briefly).
 
-- Track progress on planned and emerging tasks in projectroadmap.md document. Use checkboxes, add new tasks as they emerge, and add “DONE” to markdown items.
+- [ ] Track progress on planned and emerging tasks in projectroadmap.md document. Use checkboxes, add new tasks as they emerge, and add “DONE” to markdown items.
 
 
 ###  Sprint 3  
 
-1. Continue coding and refining and testing in Sprint 3 as in Sprint 2.
+1. [ ] Continue coding and refining and testing in Sprint 3 as in Sprint 2.
 
-2. Create one PowerPoint slide introducing the project and upload it. The slide should be attractive and informative. 
+2. [ ] Create one PowerPoint slide introducing the project and upload it. The slide should be attractive and informative. 
 
 Rquired:
 ```
