@@ -43,3 +43,5 @@ Rquired:
 - Show 1-2 screenshots or pictures demonstrating the idea or parts. Upload the PPT slide in D2L. 
 - Ensure there is a copy in the Github repository so that future coders can quickly grasp the idea.
 ```
+
+Reference: https://github.com/SOO22/draw-poses.git
