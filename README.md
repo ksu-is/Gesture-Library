@@ -40,5 +40,6 @@ Rquired:
 - Project Title.
 - Display a tag line that introduces the main concept of what the prgram does.
 
-- Show 1-2 screenshots or pictures demonstrating the idea or parts. Upload the PPT slide in D2L. Ensure there is a copy in the Github repository so that future coders can quickly grasp the idea.
+- Show 1-2 screenshots or pictures demonstrating the idea or parts. Upload the PPT slide in D2L. 
+- Ensure there is a copy in the Github repository so that future coders can quickly grasp the idea.
 ```
