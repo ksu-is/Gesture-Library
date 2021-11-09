@@ -11,7 +11,7 @@ displayed on screen and shuffled for a default duration of 20 minutes which can 
 ### Sprint 1   
 
 - Have an approved project topic
-- Established a Github account and join class organization (KSU-IS) in Github by accepting the invite email.
+- Establish a Github account and join class organization (KSU-IS) in Github by accepting the invite email.
 - Associate ownership of a code repository in Github organization.
 - Edit and commit changes in a readme.md file in the repository in Github organization. The commits should show in Github.
 - Explore at least one existing Python code base related to the project to evaluate using it in the project and submit updates to the projectroadmap.md file explaining any findings. 
