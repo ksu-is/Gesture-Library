@@ -23,11 +23,11 @@ class GestureScreen(Frame):
         self.isPaused = False
         self.maxIndex=0
         self.cancelid=0
-        #self.createFolderList(self)
+        
         self.createActiveSessionUI(self.activeSession)
-        #self.activeSession.place(relx=0,relheight=1,relwidth=1)
+        
         self.createSlideShowSession(self.slideShowSession)
-        #self.slideShowSession.place(relx=0,relheight=1,relwidth=1)
+        
         self.imgContainer = Label(self)
         self.imgContainer.place(anchor="center",relx=0.5,rely=0.5,relwidth=0.75,relheight=0.75)
         self.labelImgCounter = Label(self,textvariable=self.imgCount)
@@ -36,8 +36,7 @@ class GestureScreen(Frame):
         self.textImgPath.place(anchor="sw",relx=0,rely=1,relwidth=0.12,relheight=0.12)
 
     def createActiveSessionUI(self,parent):
-        #self.menuTime = IntVar(value=30)
-        #self.menuTimeTxt = StringVar(value="30")
+        
         btPlacementy=10
         self.ButtonPause = Button(parent,text="Pause",height=2,width=8,command=self.togglePause)
         self.ButtonPause.place(anchor="ne",relx=1,rely=0,x=-10,y=btPlacementy)
