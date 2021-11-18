@@ -7,7 +7,7 @@ allImages = []
 validImageExtensions = ("jpg","jpeg","png","gif")
 
 def updateImageCount(selected):
-    #mainMenu.destroy()
+    
     global allImages
     allImages = []
     currentImages=0
@@ -18,16 +18,15 @@ def updateImageCount(selected):
             currentImages=0
             p = dirList[folderIndex]
             list = os.listdir(p)
-            #print(list)
+            
             for fileIndex,file in enumerate(list):
                 filePath = "./"+p+"/"+file
-                #print(filePath)
+                
                 if(os.path.isfile(filePath)):
                     if(validImageFile(file)):
                         totalImages+=1
                         allImages.append((folderIndex,fileIndex))
-    #allImages = imageTuples.copy()
-    #loadImages()
+   
         
 
     return str(totalImages)
