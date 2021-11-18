@@ -9,7 +9,7 @@ class MainMenu(Frame):
         super().__init__(parent)
         self.topFrame = parent   
         self.label = Label(parent,text="Gesture Library", fg='Black', font=("Helvetica",40))
-        self.label.place(anchor="center",relx=0.5,rely=0.5, y=-200)      
+        self.label.place(anchor="center",relx=0.5,rely=0.5, y=-200)         
         self.time = 0
         self.images = 0
         self.foldersSelected = []
@@ -17,13 +17,10 @@ class MainMenu(Frame):
         self.createTimeSelection(self)
         self.createImageSelection(self)
         self.avaliable = StringVar(value="Total Images Avaliable: 0")
-        # separator = ttk.Separator(root, orient='horizontal')
-        # separator.pack(fill='x')
         self.labelTotalImages = Label(self,textvariable=self.avaliable)
         self.labelTotalImages.place(anchor="n",relx=0.5,rely=0.5)
         self.btStart = Button(self,text="Draw",height=3,width=15,command=self.prepareSession)
         self.btStart.place(anchor="center",relx=0.5,rely=0.5,y=200)
-
 
     def createFolderList(self,parent):
         self.foldersContainer = LabelFrame(parent,text="Folders ")
@@ -73,25 +70,23 @@ class MainMenu(Frame):
         btPlacementy+=60
         self.bt00 = Radiobutton(parent,text="Max", variable=self.menuImages, value=0,command=self.selectImages)
         self.bt00.place(anchor="center",relx=0.5,rely=0.5,y=btPlacementy,x=-240)
-        self.bt15 = Radiobutton(parent,text="5imgs", variable=self.menuImages, value=5,command=self.selectImages)
+        self.bt15 = Radiobutton(parent,text="5", variable=self.menuImages, value=5,command=self.selectImages)
         self.bt15.place(anchor="center",relx=0.5,rely=0.5,y=btPlacementy,x=-180)
-        self.bt30 = Radiobutton(parent,text="10imgs", variable=self.menuImages, value=10,command=self.selectImages)
+        self.bt30 = Radiobutton(parent,text="10", variable=self.menuImages, value=10,command=self.selectImages)
         self.bt30.place(anchor="center",relx=0.5,rely=0.5,y=btPlacementy,x=-120)
-        self.bt45 = Radiobutton(parent,text="15imgs", variable=self.menuImages, value=15,command=self.selectImages)
+        self.bt45 = Radiobutton(parent,text="15", variable=self.menuImages, value=15,command=self.selectImages)
         self.bt45.place(anchor="center",relx=0.5,rely=0.5,y=btPlacementy,x=-60)
-        self.bt60 = Radiobutton(parent,text="20imgs", variable=self.menuImages, value=20,command=self.selectImages)
+        self.bt60 = Radiobutton(parent,text="20", variable=self.menuImages, value=20,command=self.selectImages)
         self.bt60.place(anchor="center",relx=0.5,rely=0.5,y=btPlacementy,x=0)
-        self.bt90 = Radiobutton(parent,text="30imgs", variable=self.menuImages, value=30,command=self.selectImages)
+        self.bt90 = Radiobutton(parent,text="30", variable=self.menuImages, value=30,command=self.selectImages)
         self.bt90.place(anchor="center",relx=0.5,rely=0.5,y=btPlacementy,x=60)
-        self.bt120 = Radiobutton(parent,text="40imgs", variable=self.menuImages, value=40,command=self.selectImages)
+        self.bt120 = Radiobutton(parent,text="40", variable=self.menuImages, value=40,command=self.selectImages)
         self.bt120.place(anchor="center",relx=0.5,rely=0.5,y=btPlacementy,x=120)
-        self.bt300 = Radiobutton(parent,text="50imgs", variable=self.menuImages, value=50,command=self.selectImages)
-        self.bt300.place(anchor="center",relx=0.5,rely=0.5,y=btPlacementy,x=180)
         self.btcustom = Radiobutton(parent,text="Custom", variable=self.menuImages, value=-1,command=self.selectImages)
-        self.btcustom.place(anchor="center",relx=0.5,rely=0.5,y=btPlacementy,x=240)
+        self.btcustom.place(anchor="center",relx=0.5,rely=0.5,y=btPlacementy,x=180)
         self.entryImages = Entry(parent,width=6,textvariable=self.menuImagesTxt)
         self.entryImages.config(state=DISABLED)
-        self.entryImages.place(anchor="center",relx=0.5,rely=0.5,y=btPlacementy,x=300)
+        self.entryImages.place(anchor="center",relx=0.5,rely=0.5,y=btPlacementy,x=240)
 
     def setFolders(self):
         for dir in imgMan.dirList:
