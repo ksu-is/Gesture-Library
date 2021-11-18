@@ -1,11 +1,11 @@
 ''' code for main program '''
 
 from tkinter import *
-
 from menu import MainMenu
 from screen import GestureScreen
 import library as imgMan
-
+import tkinter as tk
+ 
 def startSession(tu):
     if(imgMan.getImageLen()>0):
         imgMan.randomizeImages()
@@ -17,11 +17,15 @@ def exitSession():
     if(imgMan.getImageLen()>0):
         gestureScreen.place_forget()
         mainMenu.place(relx=0,relheight=1,relwidth=1)
+ 
+
+
 
 root = Tk()
-root.geometry("800x600")
-root.title("GestureLibrary")
 root.iconphoto = ("")
+root.title("GestureLibrary")
+root.geometry("800x600")
+# Add a Canvas widget
 topFrame = Frame(root)
 imgMan.loadFolders()
 
