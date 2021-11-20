@@ -6,6 +6,7 @@ from screen import GestureScreen
 import library as imgMan
 import tkinter as tk
  
+# defines a function to sart the session using a conditional
 def startSession(tu):
     if(imgMan.getImageLen()>0):
         imgMan.randomizeImages()
@@ -13,6 +14,8 @@ def startSession(tu):
         
         gestureScreen.setSession(tu)
         gestureScreen.place(relx=0,relheight=1,relwidth=1)
+
+# defines a function to exit the session using a conditional
 def exitSession():
     if(imgMan.getImageLen()>0):
         gestureScreen.place_forget()
@@ -20,11 +23,12 @@ def exitSession():
  
 
 
-
+# creates the main program window
 root = Tk()
-root.iconphoto = ("")
-root.title("GestureLibrary")
-root.geometry("800x600")
+root.iconphoto = ("")               # assigns the window logo
+root.title("GestureLibrary")        # assigns the window title
+root.geometry("800x600")            # sets the window width and height
+
 # Add a Canvas widget
 topFrame = Frame(root)
 imgMan.loadFolders()
@@ -38,4 +42,4 @@ mainMenu.bindStartSession(startSession)
 gestureScreen = GestureScreen(topFrame)
 gestureScreen.bindExitSession(exitSession)
 
-root.mainloop()
+root.mainloop()                    # calls the mainloop() function
