@@ -3,8 +3,10 @@
 from tkinter import *
 import library as imgMan
 
+# the class groups all the contents of the program menu
 class MainMenu(Frame):
 
+    # defines a function for available images and start button using the __init__ method
     def __init__(self,parent):
         super().__init__(parent)
         self.topFrame = parent   
@@ -22,6 +24,7 @@ class MainMenu(Frame):
         self.btStart = Button(self,text="Draw",height=3,width=15,command=self.prepareSession)
         self.btStart.place(anchor="center",relx=0.5,rely=0.5,y=200)
 
+    # defines a function  to create and contain the image folders and a vertical scrolling option
     def createFolderList(self,parent):
         self.foldersContainer = LabelFrame(parent,text="Folders ")
         self.foldersContainer.place(anchor="center",relx=0.5,rely=0.5,relheight=.2, relwidth=.5, y=-70,x=0)
@@ -34,6 +37,7 @@ class MainMenu(Frame):
         self.folderCanvas.create_window(0,0,window=self.foldersList,anchor="nw")
         self.folderCanvas.pack(side="left")
     
+    # defines a function to create radio buttones for drawing times per image
     def createTimeSelection(self,parent):
         self.menuTime = IntVar(value=30)
         self.menuTimeTxt = StringVar(value="30")
@@ -61,6 +65,7 @@ class MainMenu(Frame):
         self.entryTime.config(state=DISABLED)
         self.entryTime.place(anchor="center",relx=0.5,rely=0.5,y=btPlacementy,x=240)
 
+    # defines a function to create radio buttons for amount of images in a single session
     def createImageSelection(self,parent):
         self.menuImages = IntVar(value=20)
         self.menuImagesTxt = StringVar(value="20")
@@ -88,6 +93,7 @@ class MainMenu(Frame):
         self.entryImages.config(state=DISABLED)
         self.entryImages.place(anchor="center",relx=0.5,rely=0.5,y=btPlacementy,x=240)
 
+    # defines a function using a method to select the images folders
     def setFolders(self):
         for dir in imgMan.dirList:
             var = BooleanVar()
@@ -95,7 +101,7 @@ class MainMenu(Frame):
             self.btca = Checkbutton(self.foldersList,text=dir,variable=var,command=self.getFolders)
             self.btca.pack(side="top",anchor="nw")
 
-
+    # defines a function using a method to get the images in the selected folder
     def getFolders(self):
         list = []
         for b in self.foldersSelected:
@@ -104,7 +110,7 @@ class MainMenu(Frame):
         self.avaliable.set("Total Images Avaliable: "+imgMan.updateImageCount(list))
         
         
-
+    # defines a function using a method and a conditional to get the time selected for images
     def selectTime(self):
         self.time = self.menuTime.get()
         if(self.time>-1):
@@ -113,6 +119,7 @@ class MainMenu(Frame):
         else:
             self.entryTime.config(state=NORMAL)
 
+    # defines a function using a method to and a conditional to check for images selected
     def selectImages(self):
         self.images = self.menuImages.get()
         if(self.images>-1):
@@ -122,9 +129,12 @@ class MainMenu(Frame):
         else:
             self.entryImages.config(state=NORMAL)
             pass
+    
+    # defines a function using a method to update the scrollbar
     def updateScrollBar(self,event):
-       self.folderCanvas.configure(scrollregion=self.folderCanvas.bbox("all"))
+       self.folderCanvas.configure(event,scrollregion=self.folderCanvas.bbox("all"))
 
+    # defines a function using a method and a conditional to get the time/images and set the draing session
     def prepareSession(self):
         self.topFrame
         valid = False
