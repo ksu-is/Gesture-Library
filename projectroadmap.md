@@ -23,7 +23,7 @@ Start coding and use git to manage the code.
 - [x] Each commit should include a comment that explains what was done. The comment must be specific (ie. not just Updated README.md but rather explain what your update was and why you did it briefly).
 
 - [x] Track progress on planned and emerging tasks in projectroadmap.md document. Use checkboxes, add new tasks as they emerge, and add “DONE” to markdown items.
-
+ 
 
 ###  Sprint 3  
 
