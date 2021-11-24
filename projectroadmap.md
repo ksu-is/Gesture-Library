@@ -29,7 +29,7 @@ Start coding and use git to manage the code.
 
 1. [ ] Continue coding and refining and testing in Sprint 3 as in Sprint 2.
 
-2. [ ] Create one PowerPoint slide introducing the project and upload it. The slide should be attractive and informative. 
+2. [x] Create one PowerPoint slide introducing the project and upload it. The slide should be attractive and informative. 
 
 Rquired:
 ```
