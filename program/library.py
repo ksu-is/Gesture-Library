@@ -6,13 +6,17 @@ dirList=[]
 allImages = []
 validImageExtensions = ("jpg","jpeg","png","gif")
 
+# defines the function for updating the image count
 def updateImageCount(selected):
     
+    # access all images
     global allImages
     allImages = []
     currentImages=0
     totalImages=0
     totalFiles=0
+
+    # using conditionals to iterate through folders
     for folderIndex,folderEnabled in enumerate(selected):
         if(folderEnabled):
             currentImages=0
@@ -28,9 +32,10 @@ def updateImageCount(selected):
                         allImages.append((folderIndex,fileIndex))
    
         
-
+    # returns total images as a string
     return str(totalImages)
 
+# defines the function for getting the images in the folder
 def getImage(index=0):
     imagePath = "null"
     if(index<len(allImages)):
@@ -40,7 +45,6 @@ def getImage(index=0):
         imageName = os.listdir(folderName)[imageIndex]
         imagePath = "./"+folderName+"/"+imageName
     return imagePath
-    pass
 
 def validImageFile(fileName):
     extension = fileName.split(".")[-1].lower()
