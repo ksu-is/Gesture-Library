@@ -38,24 +38,24 @@ class GestureScreen(Frame):
     def createActiveSessionUI(self,parent):
         
         btPlacementy=10
-        self.ButtonPause = Button(parent,text="Pause",height=2,width=8,command=self.togglePause)
+        self.ButtonPause = Button(parent,text="Pause",height=2,width=8,command=self.togglePause, bg='Gold')
         self.ButtonPause.place(anchor="ne",relx=1,rely=0,x=-10,y=btPlacementy)
         btPlacementy+=60
-        self.ButtonSkip = Button(parent,text="Skip",height=2,width=8,command=self.skipImage)
+        self.ButtonSkip = Button(parent,text="Skip",height=2,width=8,command=self.skipImage, bg='Gold')
         self.ButtonSkip.place(anchor="ne",relx=1,rely=0,x=-10,y=btPlacementy)
         btPlacementy=-10
-        self.ButtonFinish = Button(parent,text="Finish",height=2,width=8,command=self.endSession)
+        self.ButtonFinish = Button(parent,text="Finish",height=2,width=8,command=self.endSession, bg='Gold')
         self.ButtonFinish.place(anchor="se",relx=1,rely=1,x=-10,y=btPlacementy)
         self.LabelRemainingTime = Label(parent,textvariable=self.currentTime,justify="left")
         self.LabelRemainingTime.place(anchor="nw",relx=0,rely=0,x=10,y=10)
 
     def createSlideShowSession(self,parent):
-        self.ButtonPrev = Button(parent,text="<<",height=2,width=5,command=self.prevImage)
+        self.ButtonPrev = Button(parent,text="<<",height=2,width=5,command=self.prevImage, bg='Gold')
         self.ButtonPrev.place(anchor="center",relx=0.5,rely=0.05,x=-50)
-        self.ButtonPrev = Button(parent,text=">>",height=2,width=5,command=self.nextImage)
+        self.ButtonPrev = Button(parent,text=">>",height=2,width=5,command=self.nextImage, bg='Gold')
         self.ButtonPrev.place(anchor="center",relx=0.5,rely=0.05,x=50)
         btPlacementy=-10
-        self.ButtonExit = Button(parent,text="Exit",height=2,width=8,command=self.exitSession)
+        self.ButtonExit = Button(parent,text="Exit",height=2,width=8,command=self.exitSession, bg='Gold')
         self.ButtonExit.place(anchor="se",relx=1,rely=1,x=-10,y=btPlacementy)
 
     def setSession(self,sessionInfo):
