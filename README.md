@@ -44,4 +44,4 @@ Rquired:
 - Ensure there is a copy in the Github repository so that future coders can quickly grasp the idea.
 ```
 
-Reference: https://github.com/SOO22/draw-poses.git
+Reference: https://github.com/GGMagenta/draw-poses
