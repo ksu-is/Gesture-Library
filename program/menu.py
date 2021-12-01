@@ -10,7 +10,7 @@ class MainMenu(Frame):
     def __init__(self,parent):
         super().__init__(parent)
         self.topFrame = parent   
-        self.label = Label(parent,text="Gesture Library", fg='Black', font=("Helvetica",40))
+        self.label = Label(parent,text="Gesture Library", font=("Helvetica",40))
         self.label.place(anchor="center",relx=0.5,rely=0.5, y=-200)         
         self.time = 0
         self.images = 0
@@ -21,7 +21,7 @@ class MainMenu(Frame):
         self.avaliable = StringVar(value="Total Images Avaliable: 0")
         self.labelTotalImages = Label(self,textvariable=self.avaliable)
         self.labelTotalImages.place(anchor="n",relx=0.5,rely=0.5)
-        self.btStart = Button(self,text="Draw",height=3,width=15,command=self.prepareSession)
+        self.btStart = Button(self,text="Draw",height=3,width=15,command=self.prepareSession , bg='Gold')
         self.btStart.place(anchor="center",relx=0.5,rely=0.5,y=200)
 
     # defines a function  to create and contain the image folders and a vertical scrolling option
