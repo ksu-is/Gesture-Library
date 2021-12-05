@@ -27,7 +27,7 @@ Start coding and use git to manage the code.
 
 ###  Sprint 3  
 
-1. [ ] Continue coding and refining and testing in Sprint 3 as in Sprint 2.
+1. [x] Continue coding and refining and testing in Sprint 3 as in Sprint 2.
 
 2. [x] Create one PowerPoint slide introducing the project and upload it. The slide should be attractive and informative. 
 
