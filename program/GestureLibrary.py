@@ -4,7 +4,6 @@ from tkinter import *
 from menu import MainMenu
 from screen import GestureScreen
 import library as imgMan
-import tkinter as tk
  
 # defines a function to sart the session using a conditional
 def startSession(tu):
