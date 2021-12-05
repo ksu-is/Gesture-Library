@@ -3,8 +3,10 @@ from tkinter import *
 from PIL import Image,ImageTk
 import library as imgMan
 
+# creates the screen for the gesture drawing reference images
 class GestureScreen(Frame):
 
+    # define a function for the screen frame
     def __init__(self,parent):
         super().__init__(parent)
         self.topFrame = parent
@@ -35,6 +37,7 @@ class GestureScreen(Frame):
         self.textImgPath = Text(self,wrap="char")
         self.textImgPath.place(anchor="sw",relx=0,rely=1,relwidth=0.12,relheight=0.12)
 
+    # defines a function for active session interaction
     def createActiveSessionUI(self,parent):
         
         btPlacementy=10
@@ -49,6 +52,7 @@ class GestureScreen(Frame):
         self.LabelRemainingTime = Label(parent,textvariable=self.currentTime,justify="left")
         self.LabelRemainingTime.place(anchor="nw",relx=0,rely=0,x=10,y=10)
 
+    # defines a function for slideshow interaction
     def createSlideShowSession(self,parent):
         self.ButtonPrev = Button(parent,text="<<",height=2,width=5,command=self.prevImage, bg='Gold')
         self.ButtonPrev.place(anchor="center",relx=0.5,rely=0.05,x=-50)
@@ -58,6 +62,7 @@ class GestureScreen(Frame):
         self.ButtonExit = Button(parent,text="Exit",height=2,width=8,command=self.exitSession, bg='Gold')
         self.ButtonExit.place(anchor="se",relx=1,rely=1,x=-10,y=btPlacementy)
 
+    # a function for the session information using conditionals
     def setSession(self,sessionInfo):
         self.activeSession.place_forget()
         self.slideShowSession.place_forget()
@@ -82,6 +87,7 @@ class GestureScreen(Frame):
         self.nextImage()
         self.setProgress()
 
+    # a function for session progress
     def setProgress(self):
         if(self.isActive):
             self.imgCount.set(str(self.completedImages+1)+"/"+str(self.images))
@@ -118,6 +124,7 @@ class GestureScreen(Frame):
                 self.newImage()
         self.updateClock()
     
+    # a function to count completed images
     def newImage(self):
         self.completedImages+=1
         if(self.completedImages>=self.images):
