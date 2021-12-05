@@ -12,14 +12,14 @@ def updateImageCount(selected):
     # access all images
     global allImages
     allImages = []
-    currentImages=0
+    # currentImages=0
     totalImages=0
-    totalFiles=0
+    # totalFiles=0
 
     # using conditionals to iterate through folders
     for folderIndex,folderEnabled in enumerate(selected):
         if(folderEnabled):
-            currentImages=0
+            # currentImages=0
             p = dirList[folderIndex]
             list = os.listdir(p)
             
