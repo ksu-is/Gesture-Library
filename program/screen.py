@@ -25,7 +25,7 @@ class GestureScreen(Frame):
         self.isPaused = False
         self.maxIndex=0
         self.cancelid=0
-        
+
         self.createActiveSessionUI(self.activeSession)
         
         self.createSlideShowSession(self.slideShowSession)
@@ -41,25 +41,25 @@ class GestureScreen(Frame):
     def createActiveSessionUI(self,parent):
         
         btPlacementy=10
-        self.ButtonPause = Button(parent,text="Pause",height=2,width=8,command=self.togglePause, bg='Gold')
+        self.ButtonPause = Button(parent,text="Pause",height=2,width=8,command=self.togglePause, fg='silver', bg='grey9')
         self.ButtonPause.place(anchor="ne",relx=1,rely=0,x=-10,y=btPlacementy)
         btPlacementy+=60
-        self.ButtonSkip = Button(parent,text="Skip",height=2,width=8,command=self.skipImage, bg='Gold')
+        self.ButtonSkip = Button(parent,text="Skip",height=2,width=8,command=self.skipImage, fg='silver', bg='grey9')
         self.ButtonSkip.place(anchor="ne",relx=1,rely=0,x=-10,y=btPlacementy)
         btPlacementy=-10
-        self.ButtonFinish = Button(parent,text="Finish",height=2,width=8,command=self.endSession, bg='Gold')
+        self.ButtonFinish = Button(parent,text="Finish",height=2,width=8,command=self.endSession, fg='silver', bg='grey9')
         self.ButtonFinish.place(anchor="se",relx=1,rely=1,x=-10,y=btPlacementy)
         self.LabelRemainingTime = Label(parent,textvariable=self.currentTime,justify="left")
         self.LabelRemainingTime.place(anchor="nw",relx=0,rely=0,x=10,y=10)
 
     # defines a function for slideshow interaction
     def createSlideShowSession(self,parent):
-        self.ButtonPrev = Button(parent,text="<<",height=2,width=5,command=self.prevImage, bg='Gold')
+        self.ButtonPrev = Button(parent,text="<<",height=2,width=5,command=self.prevImage, fg='silver', bg='grey9')
         self.ButtonPrev.place(anchor="center",relx=0.5,rely=0.05,x=-50)
-        self.ButtonPrev = Button(parent,text=">>",height=2,width=5,command=self.nextImage, bg='Gold')
+        self.ButtonPrev = Button(parent,text=">>",height=2,width=5,command=self.nextImage, fg='silver', bg='grey9')
         self.ButtonPrev.place(anchor="center",relx=0.5,rely=0.05,x=50)
         btPlacementy=-10
-        self.ButtonExit = Button(parent,text="Exit",height=2,width=8,command=self.exitSession, bg='Gold')
+        self.ButtonExit = Button(parent,text="Exit",height=2,width=8,command=self.exitSession, fg='silver', bg='grey9')
         self.ButtonExit.place(anchor="se",relx=1,rely=1,x=-10,y=btPlacementy)
 
     # a function for the session information using conditionals
