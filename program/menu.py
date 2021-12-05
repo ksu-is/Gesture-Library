@@ -132,7 +132,7 @@ class MainMenu(Frame):
     
     # defines a function using a method to update the scrollbar
     def updateScrollBar(self,event):
-       self.folderCanvas.configure(event,scrollregion=self.folderCanvas.bbox("all"))
+       self.folderCanvas.configure(scrollregion=self.folderCanvas.bbox("all"))
 
     # defines a function using a method and a conditional to get the time/images and set the draing session
     def prepareSession(self):
